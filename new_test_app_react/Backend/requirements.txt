@@ -1,0 +1,15 @@
+flask
+flask_cors
+pandas
+joblib
+numpy
+scikit-learn
+gunicorn
+prophet
+openpyxl
+boto3
+prophet
+python-dotenv
+pyautogen 
+requests
+openai

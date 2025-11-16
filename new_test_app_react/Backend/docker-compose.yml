@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  inventory-analyzer-1.3.1:
+    image: hsense/inventory-analyzer:1.3.1
+    platform: linux/amd64
+    ports:
+      - "5011:5011"
+
+  inventory-analyzer-1.3.4:
+    image: hsense/inventory-analyzer:1.3.4
+    ports:
+      - "8080:80"
+
+  inventory-analyzer-1.3.3:
+    image: hsense/inventory-analyzer:1.3.3
+    platform: linux/amd64
+    ports:
+      - "5004:5004"

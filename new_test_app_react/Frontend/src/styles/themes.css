@@ -1,0 +1,810 @@
+/* Root-level definitions for all themes */
+:root.light-default {
+  --background: 210 38% 98% !important; /* #f8fafc */
+  --foreground: 214 59% 14% !important; /* #0f172a */
+  --primary: 217 83% 53% !important; /* #2563eb */
+  --secondary: 216 13% 35% !important; /* #4b5563 */
+  --card: 0 0% 100% !important; /* #ffffff */
+  --card-foreground: 216 28% 20% !important; /* #1e293b */
+  --border: rgba(15, 23, 42, 0.1) !important;
+  --muted: 210 38% 95% !important; /* #f1f5f9 */
+  --muted-foreground: 216 12% 48% !important; /* #64748b */
+  --accent: 210 38% 95% !important; /* #f1f5f9 */
+  --accent-foreground: 216 28% 20% !important; /* #1e293b */
+  --popover: 0 0% 100% !important; /* #ffffff */
+  --popover-foreground: 216 28% 20% !important; /* #1e293b */
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 0 0% 100% !important; /* #ffffff */
+  --sidebar-background: 210 38% 98% !important; /* #f8fafc */
+  --sidebar-foreground: 216 28% 20% !important; /* #1e293b */
+  --input: 210 38% 95% !important; /* Matches muted */
+  --ring: 217 83% 60% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 217 83% 53% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 210 38% 95% !important; /* Matches accent */
+  --sidebar-accent-foreground: 216 28% 20% !important; /* Matches sidebar-foreground */
+  --sidebar-border: rgba(15, 23, 42, 0.1) !important; /* Matches border */
+  --sidebar-ring: 217 83% 60% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.light-default * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.light-blue {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 17% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 17% 10%;
+  --primary: 220 83% 64%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 90%;
+  --secondary-foreground: 210 17% 10%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  --accent: 220 83% 94%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 16% 80%;
+  --input: 215 16% 90%;
+  --ring: 220 83% 70%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 210 17% 10%;
+  --sidebar-primary: 220 83% 64%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 16% 90%;
+  --sidebar-accent-foreground: 210 17% 10%;
+  --sidebar-border: 215 16% 80%;
+  --sidebar-ring: 220 83% 70%;
+  --positive: blue;
+  --negative: coral;  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.light-blue * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.light-teal {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 17% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 17% 10%;
+  --primary: 174 98% 37%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 90%;
+  --secondary-foreground: 210 17% 10%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  --accent: 174 100% 97%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 16% 80%;
+  --input: 215 16% 90%;
+  --ring: 220 83% 70%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 210 17% 10%;
+  --sidebar-primary: 220 83% 64%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 16% 90%;
+  --sidebar-accent-foreground: 210 17% 10%;
+  --sidebar-border: 215 16% 80%;
+  --sidebar-ring: 220 83% 70%;
+  --positive: blue;
+  --negative: coral;  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.light-teal * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.light-green {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 17% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 17% 10%;
+  --primary: 174 88% 27% !important;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 90%;
+  --secondary-foreground: 210 17% 10%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  --accent: 175 38% 92% !important;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 16% 80%;
+  --input: 215 16% 90%;
+  --ring: 220 83% 70%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 210 17% 10%;
+  --sidebar-primary: 220 83% 64%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 16% 90%;
+  --sidebar-accent-foreground: 210 17% 10%;
+  --sidebar-border: 215 16% 80%;
+  --sidebar-ring: 220 83% 70%;
+  --positive: blue;
+  --negative: coral;  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.light-green * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.light-purple {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 17% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 17% 10%;
+  --primary: 252 62% 62% !important;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 90%;
+  --secondary-foreground: 210 17% 10%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  --accent: 248 28% 90% !important;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 16% 80%;
+  --input: 215 16% 90%;
+  --ring: 220 83% 70%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 210 17% 10%;
+  --sidebar-primary: 220 83% 64%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 16% 90%;
+  --sidebar-accent-foreground: 210 17% 10%;
+  --sidebar-border: 215 16% 80%;
+  --sidebar-ring: 220 83% 70%;
+  --positive: blue;
+  --negative: coral;  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.light-purple * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.light-orange {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  --primary: 24 94% 55% !important; /* #f97316 */
+  --secondary: 215 16% 90%;
+  --card: 0 0% 100% !important; /* #ffffff */
+  --card-foreground: 216 28% 20% !important; /* #1e293b */
+  --border: 215 16% 80%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  --accent: 24 82% 95% !important; /* #fed7aa */
+  --accent-foreground: 16 73% 29% !important; /* #9a3412 */
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 17% 10%;
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 0 0% 100% !important; /* #ffffff */
+  --secondary: 215 16% 90%;
+  --secondary-foreground: 210 17% 10%;
+  --input: 215 16% 90%;
+  --ring: 24 94% 60% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 24 94% 53% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 24 82% 79% !important; /* Matches accent */
+  --sidebar-accent-foreground: 16 73% 29% !important; /* Matches sidebar-foreground */
+  --sidebar-border: rgba(249, 115, 22, 0.2) !important; /* Matches border */
+  --sidebar-ring: 24 94% 60% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.light-orange * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.dark-default {
+   --background: 0 0% 3.9% !important;
+  --foreground: 0 0% 98% !important;
+  --primary: 218 91% 60% !important; /* #3b82f6 */
+  --secondary: 217 89% 70% !important; /* #60a5fa */
+  --card: 216 28% 20% !important; /* #1e293b */
+  --card-foreground: 210 38% 98% !important; /* #f8fafc */
+  --border: 215 16% 80%;
+  --muted: 216 28% 20% !important; /* #1e293b */
+  --muted-foreground: 216 12% 61% !important; /* #94a3b8 */
+  --accent: 216 16% 27% !important; /* #334155 */
+  --accent-foreground: 210 38% 98% !important; /* #f8fafc */
+  --popover: 216 28% 20% !important; /* #1e293b */
+  --popover-foreground: 210 38% 98% !important; /* #f8fafc */
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 210 38% 98% !important; /* #f8fafc */
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --input: 216 28% 20% !important; /* Matches muted */
+  --ring: 218 91% 67% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 218 91% 60% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 216 16% 27% !important; /* Matches accent */
+  --sidebar-accent-foreground: 210 38% 98% !important; /* Matches sidebar-foreground */
+  --sidebar-border: rgba(255, 255, 255, 0.1) !important; /* Matches border */
+  --sidebar-ring: 218 91% 67% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.dark-default * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.dark-blue {
+   --background: 0 0% 3.9% !important;
+   --foreground: 0 0% 98% !important;
+  --card: 215 16% 20%;
+  --card-foreground: 210 17% 95%;
+  --popover: 215 16% 18%;
+  --popover-foreground: 210 17% 95%;
+  --primary: 220 83% 64%;
+  --primary-foreground: 210 17% 95%;
+  --secondary: 215 16% 25%;
+  --secondary-foreground: 210 17% 85%;
+  --muted: 215 16% 22%;
+  --muted-foreground: 210 17% 70%;
+  --accent: 220 13% 34%;
+  --accent-foreground: 210 17% 95%;
+  --destructive: 36 100% 65%;
+  --destructive-foreground: 215 16% 10%;
+  --border: 215 16% 28%;
+  --input: 215 16% 28%;
+  --ring: 220 83% 70%;
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 220 83% 64%;
+  --sidebar-primary-foreground: 210 17% 95%;
+  --sidebar-accent: 215 16% 22%;
+  --sidebar-accent-foreground: 210 17% 95%;
+  --sidebar-border: 215 16% 25%;
+  --sidebar-ring: 220 83% 70%;
+  --positive: blue;
+  --negative: red;
+}
+
+/* :root.dark-blue * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.dark-green {
+   --background: 0 0% 3.9% !important;
+   --foreground: 0 0% 98% !important;
+  --primary: 174 88% 17% !important; /* #00796B */
+  --secondary: 215 16% 25%;
+  --card: 215 16% 20%;
+  --card-foreground: 210 17% 95%;
+  --border: 215 16% 28%;
+  --muted: 215 16% 22%;
+  --muted-foreground: 210 17% 70%;
+  --accent: 220 13% 34%;
+  --popover: 215 16% 18%;
+  --popover-foreground: 210 17% 95%;
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 150 80% 98% !important; /* #f0fdf4 */
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --input: 215 16% 28%;
+  --ring: 174 88% 34% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 174 88% 27% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 178 100% 25% !important; /* Matches accent */
+  --sidebar-accent-foreground: 174 100% 83% !important; /* Matches sidebar-foreground */
+  --sidebar-border: rgba(0, 121, 107, 0.2) !important; /* Matches border */
+  --sidebar-ring: 174 88% 34% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.dark-green * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.dark-teal {
+    --background: 0 0% 3.9% !important;
+   --foreground: 0 0% 98% !important;
+  --secondary: 215 16% 25%;
+  --primary: 174 88% 27% !important; 
+  --card: 215 16% 20%;
+  --card-foreground: 210 17% 95%;
+  --border: 215 16% 28%;
+  --muted: 215 16% 22%;
+  --muted-foreground: 210 17% 70%;
+  --accent: 220 13% 34%;
+  --accent-foreground: 177 45% 92% !important; /* #E0F2F1 */
+  --popover: 215 16% 18%;
+  --popover-foreground: 210 17% 95%;
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 150 80% 98% !important; /* #f0fdf4 */
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --input: 215 16% 28%;
+  --ring: 174 88% 34% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 174 88% 27% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 175 88% 31% !important; /* Matches accent */
+  --sidebar-accent-foreground: 177 45% 92% !important; /* Matches accent-foreground */
+  --sidebar-border: rgba(0, 121, 107, 0.3) !important; /* Matches border */
+  --sidebar-ring: 174 88% 34% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.dark-teal * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.dark-purple {
+  --background: 0 0% 3.9% !important;
+  --foreground: 0 0% 98% !important;
+  --primary: 252 62% 62% !important; /* #512DA8 */
+  --secondary: 215 16% 25%;
+  --card: 215 16% 20%;
+  --card-foreground: 210 17% 95%;
+  --border: 215 16% 28%;
+  --muted: 215 16% 22%;
+  --muted-foreground: 210 17% 70%;
+  --accent: 220 13% 34%;
+  --accent-foreground: 296 38% 88% !important; /* #E1BEE7 */
+  --popover: 215 16% 18%;
+  --popover-foreground: 210 17% 95%;
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 270 80% 98% !important; /* #faf5ff */
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --input: 215 16% 28%;
+  --ring: 252 62% 50% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 252 62% 42% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 260 79% 28% !important; /* Matches accent */
+  --sidebar-accent-foreground: 296 38% 88% !important; /* Matches sidebar-foreground */
+  --sidebar-border: rgba(81, 45, 168, 0.2) !important; /* Matches border */
+  --sidebar-ring: 252 62% 50% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* :root.dark-purple * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.dark-orange {
+  --background: 0 0% 3.9% !important;
+  --foreground: 0 0% 98% !important;
+  --primary: 19 100% 47% !important; /* #EF6C00 */
+  --secondary: 215 16% 25%;
+  --card: 215 16% 20%;
+  --card-foreground: 210 17% 95%;
+  --border: 215 16% 28%;
+  --muted: 215 16% 22%;
+  --muted-foreground: 210 17% 70%;
+  --accent: 220 13% 34%;
+  --accent-foreground: 37 100% 75% !important; /* #FFCC80 */
+  --popover: 215 16% 18%;
+  --popover-foreground: 210 17% 95%;
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 24 94% 97% !important; /* #fff7ed */
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --input: 215 16% 28%;
+  --ring: 19 100% 54% !important; /* Slightly lighter primary */
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 19 100% 47% !important; /* Matches primary */
+  --sidebar-primary-foreground: 0 0% 100% !important; /* White for contrast */
+  --sidebar-accent: 12 88% 31% !important; /* Matches accent */
+  --sidebar-accent-foreground: 37 100% 75% !important; /* Matches sidebar-foreground */
+  --sidebar-border: rgba(239, 108, 0, 0.2) !important; /* Matches border */
+  --sidebar-ring: 19 100% 54% !important; /* Matches ring */
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+:root.dark-red {
+   --background: 0 0% 3.9%;
+   --foreground: 0 0% 98%;
+  
+  /* Primary updated */
+  --primary: 355 72% 58% !important; /* #df4955 */
+  --secondary: 358 70% 15%;
+  
+  --card: 215 16% 20%;
+  --card-foreground: 210 17% 95%;
+  --border: 215 16% 28%;
+  --muted: 215 16% 22%;
+  --muted-foreground: 0 0% 75%;
+  
+  --accent: 220 13% 34%;
+  --accent-foreground: 355 100% 88% !important; /* lighter tint of primary */
+  
+  --popover: 215 16% 18%;
+  --popover-foreground: 0 0% 98%;
+  
+  --destructive: 0 84% 60% !important; /* #ef4444 */
+  --destructive-foreground: 24 94% 97% !important; /* #fff7ed */
+  
+  --sidebar-background: 0 0% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  
+  --input: 355 72% 20%; /* matches new primary family */
+  
+  --ring: 355 72% 60% !important; /* adjusted highlight ring */
+  
+  --positive: blue !important;
+  --negative: red !important;
+  
+  /* Sidebar harmonized with new primary */
+  --sidebar-primary: 355 72% 58% !important; /* #df4955 */
+  --sidebar-primary-foreground: 0 0% 100% !important;
+  --sidebar-accent: 355 72% 20% !important;
+  --sidebar-accent-foreground: 355 100% 88% !important;
+  --sidebar-border: rgba(223, 73, 85, 0.2) !important; /* new primary w/ alpha */
+  --sidebar-ring: 355 72% 60% !important;
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+
+:root.light-red {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  
+  /* Primary updated */
+  --primary: 355 72% 58% !important; /* #df4955 */
+  --secondary: 215 16% 90%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 216 28% 20% !important; /* #1e293b */
+  
+  --border: 215 16% 80%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  
+  --accent: 355 40% 92%;
+  --accent-foreground: 355 72% 40% !important; /* darker red for accent text */
+  
+  --popover: 0 0% 99%;
+  --popover-foreground: 355 72% 20%;
+  
+  --destructive: 0 84% 60% !important;
+  --destructive-foreground: 0 0% 100% !important;
+  
+  --sidebar-background: 0 0% 96%;
+  --sidebar-foreground: 355 72% 20%;
+  
+  --input: 215 16% 90%;
+  
+  --ring: 355 72% 58% !important; /* matches primary */
+  
+  --positive: blue !important;
+  --negative: red !important;
+  
+  /* Sidebar harmonized with new primary */
+  --sidebar-primary: 355 72% 58% !important; /* #df4955 */
+  --sidebar-primary-foreground: 0 0% 100% !important;
+  --sidebar-accent: 355 40% 92% !important;
+  --sidebar-accent-foreground: 355 72% 40% !important;
+  --sidebar-border: rgba(223, 73, 85, 0.1) !important; /* #df4955 with alpha */
+  --sidebar-ring: 355 72% 58% !important;
+  
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+
+
+/* :root.dark-orange * {
+  --background: inherit !important;
+  --foreground: inherit !important;
+  background-color: inherit !important;
+  color: inherit !important;
+} */
+
+:root.light-gray {
+  --background: 0 0% 100%;
+  --foreground: 210 17% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 17% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 17% 10%;
+  --primary: 0 0% 62% !important; /* #9D9E9E */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 90%;
+  --secondary-foreground: 210 17% 10%;
+  --muted: 215 16% 90%;
+  --muted-foreground: 210 17% 50%;
+  --accent: 0 0% 95% !important;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 16% 80%;
+  --input: 215 16% 90%;
+  --ring: 0 0% 70% !important;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 210 17% 10%;
+  --sidebar-primary: 0 0% 62% !important;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 16% 90%;
+  --sidebar-accent-foreground: 210 17% 10%;
+  --sidebar-border: 215 16% 80%;
+  --sidebar-ring: 0 0% 70% !important;
+  --positive: blue;
+  --negative: coral;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+:root.dark-gray {
+  --background: 0 0% 16% !important; /* #2A2B29 */
+  --foreground: 0 0% 95% !important;
+  --primary: 0 0% 62% !important; /* #9D9E9E */
+  --secondary: 0 0% 25%;
+  --card: 0 0% 20% !important;
+  --card-foreground: 0 0% 95% !important;
+  --border: 0 0% 28%;
+  --muted: 0 0% 22%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 0 0% 34% !important;
+  --accent-foreground: 0 0% 95% !important;
+  --popover: 0 0% 18%;
+  --popover-foreground: 0 0% 95%;
+  --destructive: 0 84% 60% !important;
+  --destructive-foreground: 0 0% 100% !important;
+  --sidebar-background: 0 0% 18% !important;
+  --sidebar-foreground: 0 0% 90% !important;
+  --input: 0 0% 28%;
+  --ring: 0 0% 70% !important;
+  --positive: blue !important;
+  --negative: red !important;
+  --sidebar-primary: 0 0% 62% !important;
+  --sidebar-primary-foreground: 0 0% 100% !important;
+  --sidebar-accent: 0 0% 34% !important;
+  --sidebar-accent-foreground: 0 0% 95% !important;
+  --sidebar-border: rgba(0, 0, 0, 0.3) !important;
+  --sidebar-ring: 0 0% 70% !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* Base element styling */
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Only apply data-theme if no theme class is present */
+:root[data-theme="dark"]:not([class*="dark-"]):not([class*="light-"]),
+:root[data-theme="light"]:not([class*="dark-"]):not([class*="light-"]) {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Apply theme to UI components */
+.button, 
+button[class*="btn"],
+.btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button:hover,
+button[class*="btn"]:hover,
+.btn:hover {
+  background-color: var(--secondary);
+}
+
+/* Ensure dropdown menus have proper background */
+.dropdown-menu {
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border-color: var(--border);
+}
+
+/* Style sidebar according to theme with higher specificity */
+:root .sidebar,
+:root[class*="light-"] .sidebar,
+:root[class*="dark-"] .sidebar {
+  background-color: var(--sidebar-background) !important;
+  color: var(--sidebar-foreground) !important;
+}
+
+/* Style active tab in sidebar with higher specificity */
+:root .sidebar-menu-sub-button[data-active="true"],
+:root .sidebar [data-active="true"],
+:root [data-sidebar="menu-button"][data-active="true"],
+:root[class*="light-"] .sidebar-menu-sub-button[data-active="true"],
+:root[class*="light-"] .sidebar [data-active="true"],
+:root[class*="light-"] [data-sidebar="menu-button"][data-active="true"],
+:root[class*="dark-"] .sidebar-menu-sub-button[data-active="true"],
+:root[class*="dark-"] .sidebar [data-active="true"],
+:root[class*="dark-"] [data-sidebar="menu-button"][data-active="true"] {
+  background-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+:root [data-sidebar="menu-sub-button"][data-active="true"],
+:root[class*="light-"] [data-sidebar="menu-sub-button"][data-active="true"],
+:root[class*="dark-"] [data-sidebar="menu-sub-button"][data-active="true"] {
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+}
+
+/* Apply theme transitions */
+html, body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-family) !important;
+}
+
+button, a, input, select, textarea {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Override shadcn UI components with theme variables */
+.dark [data-theme="dark"] {
+  --background: var(--background);
+  --foreground: var(--foreground);
+  --card: var(--card);
+  --card-foreground: var(--card-foreground);
+  --popover: var(--popover);
+  --popover-foreground: var(--popover-foreground);
+  --primary: var(--primary);
+  --primary-foreground: white;
+  --secondary: var(--secondary);
+  --secondary-foreground: white;
+  --muted: var(--muted);
+  --muted-foreground: var(--muted-foreground);
+  --accent: var(--accent);
+  --accent-foreground: var(--accent-foreground);
+  --destructive: var(--destructive);
+  --destructive-foreground: var(--destructive-foreground);
+  --border: var(--border);
+}
+
+[data-theme="light"] {
+  --background: var(--background);
+  --foreground: var(--foreground);
+  --card: var(--card);
+  --card-foreground: var(--card-foreground);
+  --popover: var(--popover);
+  --popover-foreground: var(--popover-foreground);
+  --primary: var(--primary);
+  --primary-foreground: white;
+  --secondary: var(--secondary);
+  --secondary-foreground: white;
+  --muted: var(--muted);
+  --muted-foreground: var(--muted-foreground);
+  --accent: var(--accent);
+  --accent-foreground: var(--accent-foreground);
+  --destructive: var(--destructive);
+  --destructive-foreground: var(--destructive-foreground);
+  --border: var(--border);
+}
+
+/* Headers styling */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+}
+
+/* Form controls */
+input, select, textarea {
+  background-color: var(--background);
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+/* Cards */
+.card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-color: var(--border);
+}
+
+/* Tables */
+table {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-color: var(--border);
+}
+
+table th {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+
+/* Data grid / AG Grid customizations */
+.ag-theme-alpine, .ag-theme-alpine-dark {
+  --ag-background-color: var(--card);
+  --ag-foreground-color: var(--card-foreground);
+  --ag-border-color: var(--border);
+  --ag-header-background-color: var(--muted);
+  --ag-header-foreground-color: var(--muted-foreground);
+  --ag-odd-row-background-color: var(--accent);
+  --ag-row-hover-color: var(--muted);
+  --ag-selected-row-background-color: var(--primary);
+}
+
+/* Additional styling for sidebar specifically */
+[data-sidebar="menu-button"] {
+  color: var(--sidebar-foreground);
+}
+
+[data-sidebar="menu-button"]:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}

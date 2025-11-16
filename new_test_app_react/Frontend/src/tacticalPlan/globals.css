@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 215 16% 16%; /* #232931 */
+    --foreground: 210 17% 95%; /* Light gray for text */
+
+    --card: 215 16% 20%; /* Slightly lighter than background #2C333C */
+    --card-foreground: 210 17% 95%;
+
+    --popover: 215 16% 18%; /* #262D34 */
+    --popover-foreground: 210 17% 95%;
+
+    --primary: 220 83% 64%; /* #558BEE */
+    --primary-foreground: 210 17% 95%; /* White/light gray text on primary */
+
+    --secondary: 215 16% 25%; /* #353C4A */
+    --secondary-foreground: 210 17% 85%;
+
+    --muted: 215 16% 22%; /* #2F3740 */
+    --muted-foreground: 210 17% 70%; /* Lighter gray for muted text */
+
+    --accent: 220 83% 64%; /* Same as primary for hover states etc. */
+    --accent-foreground: 210 17% 95%;
+
+    --destructive: 36 100% 65%; /* Warm orange #FFB74D for critical alerts */
+    --destructive-foreground: 215 16% 10%; /* Dark text for contrast on orange */
+
+    --border: 215 16% 28%; /* #3D4552 */
+    --input: 215 16% 28%; /* #3D4552 */
+    --ring: 220 83% 70%; /* Lighter primary for focus rings #73A2F1 */
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --radius: 0.5rem;
+
+    --font-geist-sans: "Geist Variable", sans-serif;
+    --font-geist-mono: "Geist Mono Variable", monospace;
+
+    --sidebar-background: 215 16% 18%; /* #262D34 */
+    --sidebar-foreground: 210 17% 90%;
+    --sidebar-primary: 220 83% 64%; /* #558BEE */
+    --sidebar-primary-foreground: 210 17% 95%;
+    --sidebar-accent: 215 16% 22%; /* #2F3740 */
+    --sidebar-accent-foreground: 210 17% 95%;
+    --sidebar-border: 215 16% 25%; /* #353C4A */
+    --sidebar-ring: 220 83% 70%; /* #73A2F1 */
+
+    --positive: blue;
+    --negative: red;
+  }
+
+  :root[data-theme='light'] {
+    --positive: blue;
+    --negative: coral;
+    --background: 0 0% 100%; /* White background */
+    --foreground: 210 17% 10%; /* Dark gray for text */
+
+    --card: 0 0% 95%; /* Light gray background */
+    --card-foreground: 210 17% 10%;
+
+    --popover: 0 0% 100%; /* White background */
+    --popover-foreground: 210 17% 10%;
+
+    --primary: 220 83% 64%; /* #558BEE */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 215 16% 90%; /* Light gray */
+    --secondary-foreground: 210 17% 10%;
+
+    --muted: 215 16% 90%; /* Light gray */
+    --muted-foreground: 210 17% 50%; /* Gray for muted text */
+
+    --accent: 220 83% 64%; /* #558BEE */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 50%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive */
+
+    --border: 215 16% 80%; /* Light gray border */
+    --input: 215 16% 90%; /* Light gray input */
+    --ring: 220 83% 70%; /* Lighter primary for focus rings #73A2F1 */
+
+    --sidebar-background: 0 0% 100%; /* White */
+    --sidebar-foreground: 210 17% 10%;
+    --sidebar-primary: 220 83% 64%; /* #558BEE */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 16% 90%; /* Light gray */
+    --sidebar-accent-foreground: 210 17% 10%;
+    --sidebar-border: 215 16% 80%; /* Light gray border */
+    --sidebar-ring: 220 83% 70%; /* #73A2F1 */
+
+    --positive: blue;
+    --negative: coral;
+  }
+
+  /* Add themes for other color schemes */
+  :root[data-theme='light-blue'] {
+    --background: 220 70% 90%;
+    --foreground: 210 17% 10%;
+    --card: 220 70% 95%;
+    --card-foreground: 210 17% 10%;
+    --primary: 220 83% 64%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='light-teal'] {
+    --background: 160 70% 90%;
+    --foreground: 210 17% 10%;
+    --card: 160 70% 95%;
+    --card-foreground: 210 17% 10%;
+    --primary: 160 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='light-green'] {
+    --background: 140 70% 90%;
+    --foreground: 210 17% 10%;
+    --card: 140 70% 95%;
+    --card-foreground: 210 17% 10%;
+    --primary: 140 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='light-purple'] {
+    --background: 280 70% 90%;
+    --foreground: 210 17% 10%;
+    --card: 280 70% 95%;
+    --card-foreground: 210 17% 10%;
+    --primary: 280 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='light-orange'] {
+    --background: 30 70% 90%;
+    --foreground: 210 17% 10%;
+    --card: 30 70% 95%;
+    --card-foreground: 210 17% 10%;
+    --primary: 30 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='dark-blue'] {
+    --background: 220 70% 10%;
+    --foreground: 210 17% 95%;
+    --card: 220 70% 15%;
+    --card-foreground: 210 17% 95%;
+    --primary: 220 83% 64%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='dark-teal'] {
+    --background: 160 70% 10%;
+    --foreground: 210 17% 95%;
+    --card: 160 70% 15%;
+    --card-foreground: 210 17% 95%;
+    --primary: 160 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='dark-green'] {
+    --background: 140 70% 10%;
+    --foreground: 210 17% 95%;
+    --card: 140 70% 15%;
+    --card-foreground: 210 17% 95%;
+    --primary: 140 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='dark-purple'] {
+    --background: 280 70% 10%;
+    --foreground: 210 17% 95%;
+    --card: 280 70% 15%;
+    --card-foreground: 210 17% 95%;
+    --primary: 280 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  :root[data-theme='dark-orange'] {
+    --background: 30 70% 10%;
+    --foreground: 210 17% 95%;
+    --card: 30 70% 15%;
+    --card-foreground: 210 17% 95%;
+    --primary: 30 60% 50%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  
+ :root[data-theme='dark-red'] {
+  --background: 358 70% 10%;    /* rgb(38, 13, 14) */
+  --foreground: 0 0% 95%;       /* rgb(242, 242, 242) */
+  --card: 358 70% 15%;          /* rgb(51, 15, 16) */
+  --card-foreground: 0 0% 95%;  /* rgb(242, 242, 242) */
+  --primary: 358 78% 51%;       /* rgb(227, 30, 36) - #E31E24 */
+  --primary-foreground: 0 0% 100%; /* rgb(255, 255, 255) */
+}
+
+  
+:root[data-theme='light-red'] {
+  --background: 0 0% 98%;       /* rgb(250, 250, 250) - Very light background */
+  --foreground: 358 70% 15%;    /* rgb(51, 15, 16) - Dark red text */
+  --card: 0 0% 100%;            /* rgb(255, 255, 255) - White cards */
+  --card-foreground: 358 70% 15%; /* rgb(51, 15, 16) - Dark red card text */
+  --primary: 358 78% 51%;       /* rgb(227, 30, 36) - #E31E24 */
+  --primary-foreground: 0 0% 100%; /* rgb(255, 255, 255) - White text on primary */
+}
+
+  :root[data-theme='dark'] {
+    --background: 215 16% 16%; /* #232931 */
+    --foreground: 210 17% 95%; /* Light gray for text */
+
+    --card: 215 16% 20%; /* Slightly lighter than background #2C333C */
+    --card-foreground: 210 17% 95%;
+
+    --popover: 215 16% 18%; /* #262D34 */
+    --popover-foreground: 210 17% 95%;
+
+    --primary: 220 83% 64%; /* #558BEE */
+    --primary-foreground: 210 17% 95%; /* White/light gray text on primary */
+
+    --secondary: 215 16% 25%; /* #353C4A */
+    --secondary-foreground: 210 17% 85%;
+
+    --muted: 215 16% 22%; /* #2F3740 */
+    --muted-foreground: 210 17% 70%; /* Lighter gray for muted text */
+
+    --accent: 220 83% 64%; /* Same as primary for hover states etc. */
+    --accent-foreground: 210 17% 95%;
+
+    --destructive: 36 100% 65%; /* Warm orange #FFB74D for critical alerts */
+    --destructive-foreground: 215 16% 10%; /* Dark text for contrast on orange */
+
+    --border: 215 16% 28%; /* #3D4552 */
+    --input: 215 16% 28%; /* #3D4552 */
+    --ring: 220 83% 70%; /* Lighter primary for focus rings #73A2F1 */
+
+    --sidebar-background: 215 16% 18%; /* #262D34 */
+    --sidebar-foreground: 210 17% 90%;
+    --sidebar-primary: 220 83% 64%; /* #558BEE */
+    --sidebar-primary-foreground: 210 17% 95%;
+    --sidebar-accent: 215 16% 22%; /* #2F3740 */
+    --sidebar-accent-foreground: 210 17% 95%;
+    --sidebar-border: 215 16% 25%; /* #353C4A */
+    --sidebar-ring: 220 83% 70%; /* #73A2F1 */
+
+    --positive: blue;
+    --negative: red;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for table rows */
+.lob-row {
+  background-color: #4a90e2; /* A shade of blue */
+}
+
+.bu-row {
+  background-color: #50e3c2; /* A shade of green */
+}
+
+.team-row {
+  background-color: #f5a623; /* A shade of orange */
+}
+
+.nested-row {
+  background-color: rgba(128, 128, 128, 0.3); /* Shaded grey with reduced opacity */
+}
+
+/* Ensure background covers the entire cell */
+.lob-row, .bu-row, .team-row, .nested-row {
+  td:first-child {
+    background-color: inherit; /* Inherit background from the row class */
+  }
+}
+.bg-secondary {
+  background-color: #054761; /* Light gray for BU */
+}
+
+.bg-muted {
+  background-color: rgba(15, 96, 77, 0.295); /* Slightly darker gray for LOB */
+}
+
+.bg-muted\/50 {
+  background-color: rgba(111, 60, 30, 0.2); /* Even lighter gray for Teams */
+}
+
+.bg-assumptions {
+  background-color: #1da1f3; /* Light blue for Assumptions */
+}
+
+.bg-adjustments {
+  background-color: #1da1f3; /* Light green for Adjustments */
+}

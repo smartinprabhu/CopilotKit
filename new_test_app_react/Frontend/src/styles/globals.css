@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+
+    /* Custom Sidebar Variables */
+    --sidebar-background: 222.2 47.4% 11.2%; /* Default to dark theme primary */
+    --sidebar-foreground: 210 40% 98%; /* Default to dark theme primary-foreground */
+    --sidebar-accent: 210 40% 98%; /* Default to dark theme primary-foreground for hover */
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%; /* Default to dark theme primary for hover text */
+    --sidebar-border: 215 27.9% 16.9%; /* Darker border for sidebar */
+    --sidebar-ring: 224.3 76.3% 48%; /* Ring color for focus, adjust as needed */
+  }
+ 
+  .dark {
+     --background: 0 0% 3.9%;
+     --foreground: 0 0% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Custom Sidebar Variables for Dark Theme */
+    --sidebar-background: 0 0% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-accent: 217.2 32.6% 25.5%; /* Slightly lighter dark for hover */
+    --sidebar-accent-foreground: 210 40% 98%; /* Light text for hover */
+    --sidebar-border: 217.2 32.6% 25.5%; 
+    --sidebar-ring: 212.7 26.8% 83.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@import '@fontsource/gotham/700.css';
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji") !important;
+}
+
+/* Targets the main sidebar div when it's collapsed to icon view, on desktop, and hovered */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover {
+    width: var(--sidebar-width) !important; /* Use !important to override inline style if necessary, or ensure high specificity */
+    position: fixed; /* Or absolute, depending on parent stacking context */
+    left: 0; /* Assuming sidebar is on the left */
+    top: 0;
+    bottom: 0;
+    z-index: 50; /* Ensure it's above other content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    transition: width 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Ensure text within menu buttons becomes fully visible on hover overlay */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="menu-button"] > span:last-child,
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="menu-sub-button"] > span:last-child {
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: auto !important; /* Allow text to take its natural width */
+    white-space: normal !important; /* Prevent truncation */
+    overflow: visible !important; /* Ensure text is not clipped */
+    display: inline !important; /* Ensure span is displayed */
+}
+
+/* Ensure icons and text align correctly in the overlay */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="menu-button"],
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="menu-sub-button"] {
+    width: 100% !important; /* Ensure buttons take full width of expanded overlay */
+    padding-left: 0.5rem !important; /* Restore padding */
+    justify-content: flex-start !important; /* Align items to start */
+}
+
+/* Make group labels and sub-menus visible in hover overlay */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="group-label"],
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="menu-sub"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-top: 0 !important; /* Reset any negative margin used for hiding */
+    display: block !important; /* Or flex, depending on original display type */
+}
+
+/* Ensure the ::after pseudo-element for the rail is hidden during hover overlay */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="rail"]::after {
+    display: none !important;
+}
+
+/* If there's a specific class or attribute that makes text disappear in icon mode, override it */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover .group-data-\[collapsible=icon\]\:\!hidden {
+    display: inline !important; /* Or appropriate display type */
+}
+
+/* General class for hidden text in icon-only mode to show on hover-overlay */
+.icon-only-hidden-text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.1s, width 0.1s;
+}
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]) .icon-only-hidden-text {
+    opacity: 0 !important;
+    width: 0 !important;
+    visibility: hidden !important;
+}
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover .icon-only-hidden-text {
+    opacity: 1 !important;
+    width: auto !important;
+    visibility: visible !important;
+}
+
+/* Ensure the div containing the image and toggle button in Sidebar.tsx is not affecting layout negatively */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover .flex.flex-col.items-center.justify-center {
+    /* Adjust if needed, but likely fine */
+}
+
+/* Ensure the image itself behaves as expected if it's part of the hover overlay */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover img {
+    /* Max-width might be useful if it's too large for the expanded overlay */
+    /* max-width: calc(var(--sidebar-width) - 2rem); Example */
+}
+
+/* Ensure the custom toggle button (MoreVertical) is not displayed when the sidebar is expanded on hover */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover button[aria-label="Toggle sidebar"] {
+    /* display: none !important; /* This might be too aggressive if the button is part of the main structure */
+}
+
+/* Specific adjustments for SidebarMenuButtonOriginal if it's used for the main items */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-testid="sidebar-menu-button-original"] span {
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: auto !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    display: inline !important;
+}
+
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-testid="sidebar-menu-button-original"] {
+    width: 100% !important;
+    padding-left: 0.5rem !important;
+    justify-content: flex-start !important;
+}
+
+/* Ensure the spans within the sub-menu buttons are visible on hover */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover [data-sidebar="menu-sub-button"] span {
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: auto !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    display: inline !important;
+}
+
+/* If the main sidebar div has 'overflow-hidden' when collapsed, ensure it's 'overflow-y: auto' on hover */
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]) {
+    /* existing styles might include overflow: hidden */
+}
+
+[data-sidebar="sidebar"][data-state="collapsed"][data-collapsible="icon"]:not([data-mobile="true"]):hover {
+    overflow-y: auto !important; /* Important to override potential inline styles or more specific selectors */
+}
