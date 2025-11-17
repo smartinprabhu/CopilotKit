@@ -28,6 +28,7 @@ import {
   CalendarCheck,
   House,
   LucideComputer,
+  BrainCircuit,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ThemeSelector from "./ThemeSelector";
@@ -75,7 +76,8 @@ const CustomSidebar = ({ activeTab, setActiveTab, headerText, setOpenModal, hand
   const [expandedSections, setExpandedSections] = useState({
     forecasting: true,
     capacity: true,
-    aiAgents: true
+    aiAgents: true,
+    aiInsights: true,
   });
 
   type Tabs = { id: string; name: string };
@@ -120,11 +122,13 @@ const CustomSidebar = ({ activeTab, setActiveTab, headerText, setOpenModal, hand
     const inForecasting = forecastingTabs.some((tab) => tab.id === activeTab);
     const inCapacity = capacityTabs.some((tab) => tab.id === activeTab);
     const aiAgents = activeTab === 'NewAgent';
+    const aiInsights = activeTab === 'AIInsights';
 
     setExpandedSections({
       forecasting: inForecasting,
       capacity: inCapacity,
       aiAgents: aiAgents,
+      aiInsights: aiInsights,
     });
   }, [activeTab]);
 
@@ -220,6 +224,11 @@ const CustomSidebar = ({ activeTab, setActiveTab, headerText, setOpenModal, hand
     // Handle AI Agents navigation
     if (id === "NewAgent") {
       navigate("/new-agent");
+      setActiveTab(id);
+      return;
+    }
+    if (id === "AIInsights") {
+      navigate("/ai-insights");
       setActiveTab(id);
       return;
     }
@@ -452,6 +461,37 @@ const CustomSidebar = ({ activeTab, setActiveTab, headerText, setOpenModal, hand
                           <LucideComputer className="sidebar-menu-icon" />
                           <span className="text-sm font-medium group-data-[collapsible=icon]:hidden">
                             Agents
+                          </span>
+                        </SidebarMenuButtonOriginal>
+                      </SidebarMenuItem>
+                    )}
+
+                    {/* AI INSIGHTS Section */}
+                    <div
+                      className="flex items-center justify-between py-2 px-3 cursor-pointer hover:bg-sidebar-accent rounded-lg transition-colors duration-200 group-data-[collapsible=icon]:hidden mt-2"
+                      onClick={() => toggleSection('aiInsights')}
+                    >
+                      <p className="text-sm font-bold m-0">AI Insights</p>
+                      {expandedSections.aiInsights ?
+                        <ChevronDown className="h-4 w-4" /> :
+                        <ChevronRight className="h-4 w-4" />
+                      }
+                    </div>
+
+                    {expandedSections.aiInsights && (
+                      <SidebarMenuItem>
+                        <SidebarMenuButtonOriginal
+                          tooltip="AI Insights"
+                          onClick={() => ondashboardClick("AIInsights")}
+                          className={`flex items-center gap-2 py-2 rounded-lg transition-colors duration-200 w-full ${activeTab === "AIInsights"
+                            ? "bg-primary text-secondary-foreground font-bold"
+                            : "bg-transparent"
+                            } hover:!bg-sidebar-accent hover:!text-sidebar-accent-foreground ${sidebarState === "expanded" ? "pl-2" : ""
+                            }`}
+                        >
+                          <BrainCircuit className="sidebar-menu-icon" />
+                          <span className="text-sm font-medium group-data-[collapsible=icon]:hidden">
+                            Insights
                           </span>
                         </SidebarMenuButtonOriginal>
                       </SidebarMenuItem>
