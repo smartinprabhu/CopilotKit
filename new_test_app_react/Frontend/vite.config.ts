@@ -24,6 +24,16 @@ export default defineConfig(({ mode }) => ({
         secure: false,
         rewrite: (path) => path.replace(/^\/api\/v2/, '/api/v2'),
       },
+      '/api/copilotkit': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+      '/api/business-units': {
+        target: 'http://localhost:5011',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/business-units/, '/business-units'),
+      },
     },
   },
    build: {

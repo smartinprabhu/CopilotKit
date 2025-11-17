@@ -10,6 +10,9 @@ import { MainContent } from "./companyData/mainContent";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "@/components/ThemeContext";
 import AuthService from "@/auth/utils/authService"; // Import AuthService
+import { CopilotProvider } from "./copilot/CopilotProvider";
+import { BusinessDataProvider } from "./copilot/contexts/BusinessDataContext";
+import { AIInsightsPage } from "./pages/AIInsightsPage";
 
 const queryClient = new QueryClient();
 
@@ -23,36 +26,50 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            <Routes>
-              {/* Public Route */}
+            <CopilotProvider>
+              <BusinessDataProvider>
+                <Routes>
+                  {/* Public Route */}
 
-              {/* Protected Routes - only show if accessToken exists */}
-              {accessToken ? (
-                <>
-                  <Route path="/dashboard" element={<Index />} />
-                  <Route path="/company" element={<MainContent />} />
-                  <Route path="/new-agent" element={
-                    <React.Suspense fallback={
-                      <div className="min-h-screen bg-background flex items-center justify-center">
-                        <div className="text-muted-foreground">Loading...</div>
-                      </div>
-                    }>
-                      {React.createElement(React.lazy(() => import('./pages/NewAgentPage')))}
-                    </React.Suspense>
-                  } />
-                  <Route path="/" element={<Index />} />
-                  <Route path="*" element={<NotFound />} />
-                  {/* Add more protected routes here */}
-                </>
-              ) : (
-                 <>
-                 <Route path="/dashboard" element={<Login />} />
-                  <Route path="/company" element={<Login />} />
-                  <Route path="/" element={<Login />} />
-                 <Route path="*" element={<Login />} />
-                </>
-              )}
-            </Routes>
+                  {/* Protected Routes - only show if accessToken exists */}
+                  {accessToken ? (
+                    <>
+                      <Route path="/dashboard" element={<Index />} />
+                      <Route path="/company" element={<MainContent />} />
+                  <Route path="/ai-insights" element={<AIInsightsPage />} />
+                      <Route
+                        path="/new-agent"
+                        element={
+                          <React.Suspense
+                            fallback={
+                              <div className="min-h-screen bg-background flex items-center justify-center">
+                                <div className="text-muted-foreground">
+                                  Loading...
+                                </div>
+                              </div>
+                            }
+                          >
+                            {React.createElement(
+                              React.lazy(() => import("./pages/NewAgentPage"))
+                            )}
+                          </React.Suspense>
+                        }
+                      />
+                      <Route path="/" element={<Index />} />
+                      <Route path="*" element={<NotFound />} />
+                      {/* Add more protected routes here */}
+                    </>
+                  ) : (
+                    <>
+                      <Route path="/dashboard" element={<Login />} />
+                      <Route path="/company" element={<Login />} />
+                      <Route path="/" element={<Login />} />
+                      <Route path="*" element={<Login />} />
+                    </>
+                  )}
+                </Routes>
+              </BusinessDataProvider>
+            </CopilotProvider>
           </BrowserRouter>
         </TooltipProvider>
       </QueryClientProvider>
